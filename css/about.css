@@ -1,3 +1,51 @@
 body {
   background-color: #0000FF;
 }
+
+/* Add your CSS styles here */
+
+.h1 {
+  color: black;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.p {
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 20px;
+}
+
+/* Add more styles as needed */
+
+.h2 {
+    color: black;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.p {
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px;
+}
+
+/* Add more styles as needed */
+
+.h2{
+    color: black;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.p{
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px;
+}
