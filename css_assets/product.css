@@ -27,3 +27,37 @@
     overflow: hidden;
     background-color: #333;
 }
+
+.ul li {
+    float: left;
+}
+
+.ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.ul li a:hover {
+    background-color: #111;
+}
+
+/* Footer */
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.footer p {
+    margin: 0;
+}
+
+
