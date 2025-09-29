@@ -2,6 +2,7 @@ body {
   background-color: purple;
 }
 
+/*header style*/
 .h1{
     font-size: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,6 +10,7 @@ body {
     margin-bottom: 1rem;
 }
 
+/*paragraph style*/
 p{
     font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
