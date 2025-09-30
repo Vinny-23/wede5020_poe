@@ -12,13 +12,25 @@
 .ul {
     list-style-type: none;
     margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
+
+.ul li {
+    float: left;
+}
+
 .ul li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+nav {
+    background-color: black;
 }
 
 nav a {
@@ -30,50 +42,6 @@ nav a {
 
 nav a:hover {
     background-color: black;
-}   
-
-nav {
-    background-color: black;
-   
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer {
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-}
-
-/* Unordered List */
-
-.ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-.ul li {
-    float: left;
-}
-.ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
 }
 
 
@@ -90,3 +58,54 @@ nav a {
     bottom: 0;
     width: 100%;
 }
+
+/* Table */
+table {
+    font-family: 'century gothic', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}   
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+th {
+    background-color: black;
+    color: white;
+}   
+h2 {
+    color: black;
+    text-align: center;
+}   
+h3 {
+    color: black;
+    text-align: center;
+}   
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}   
+a {
+    color: black;
+}   
+a:hover {
+    color: purple;
+}   
+p {
+    color: black;
+    text-align: center;
+}   
+caption {
+    caption-side: top;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}   
+/* End of CSS file */   
+
