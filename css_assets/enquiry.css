@@ -1,3 +1,10 @@
+/* Bold and Underline class */
+.bold-underline {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Header styles */
 body {
   background-color: black;
 }
