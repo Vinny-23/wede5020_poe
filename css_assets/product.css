@@ -3,6 +3,35 @@
 body {
   background-color: purple;
 }
+/* Heading styles */
+.h1 {
+    font-size: 30px;
+    font-family: 'century gothic', sans-serif;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: black;
+    text-align: center; 
+}
+/* Paragraph styles */
+p {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: black;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+nav {
+    background-color: black;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+}
 
 /* Product Page CSS File */
 .body {
