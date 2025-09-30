@@ -1,23 +1,58 @@
 .body {
-  background-color: red;
+  background-color: purple;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'century gothic', sans-serif;
+  margin: 10px;
 }
 
-/* Header style */
-.h1 {
-    color: black;
-    font-size: 40px;
+
+/* Unordered List */
+
+.ul {
+    list-style-type: none;
+    margin: 0;
+}
+.ul li a {
+    display: block;
+    color: white;
     text-align: center;
-    font-family: Arial, sans-serif;
-    margin: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-/* Paragraph style */
-.p {
-    color: black;
-    font-size: 20px;
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: black;
+}   
+
+nav {
+    background-color: black;
+   
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer {
     text-align: center;
-    font-family: Arial, sans-serif;
-    margin: 10px;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
 }
 
 /* Unordered List */
@@ -33,7 +68,6 @@
 .ul li {
     float: left;
 }
-
 .ul li a {
     display: block;
     color: white;
@@ -42,9 +76,7 @@
     text-decoration: none;
 }
 
-.ul li a:hover {
-    background-color: #111;
-}
+
 
 /* Footer */
 
@@ -58,8 +90,3 @@
     bottom: 0;
     width: 100%;
 }
-.footer p {
-    margin: 0;
-}
-
-

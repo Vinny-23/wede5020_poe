@@ -5,9 +5,11 @@ body {
 /*header style*/
 .h1{
     font-size: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'centurty gothic', sans-serif;
     font-weight: bold;
     margin-bottom: 1rem;
+    color: black;
+    text-align: center; 
 }
 
 /*paragraph style*/
