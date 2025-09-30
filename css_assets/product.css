@@ -3,6 +3,7 @@
 body {
   background-color: purple;
 }
+
 /* Heading styles */
 .h1 {
     font-size: 30px;
@@ -12,6 +13,7 @@ body {
     color: black;
     text-align: center; 
 }
+
 /* Paragraph styles */
 p {
     font-size: 16px;
@@ -27,7 +29,8 @@ nav {
     background-color: black;
 }
 tr:hover {
-    background-color: #ddd;
+    background-color: black;
+    color: white;
     
 }
 
@@ -54,6 +57,7 @@ h3 {
     color: black;
     text-align: center;
 } 
+
 button {
     background-color: purple;
     color: white;
@@ -64,22 +68,10 @@ button {
     font-size: 16px;
     margin: 10px;
 }
+
 button:hover {
     background-color: darkmagenta;
 }
-
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: auto;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: white;
-    margin-bottom: 20px;
-}  
 
 a {
     color: black;
@@ -109,6 +101,7 @@ p {
     text-align: center;
     text-justify: inter-word;
 } 
+
 h5 {
     color: black;
     text-align: center;
@@ -127,5 +120,6 @@ caption {
     font-family: 'century gothic', sans-serif;
     color: black;
 }   
+
 /* End of CSS file */   
 
