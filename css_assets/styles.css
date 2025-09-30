@@ -16,7 +16,17 @@ p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 1rem;
     line-height: 1.5;
-    color: #333;
+    color: black;
     text-align: justify;
     text-justify: inter-word;
+}
+nav {
+    background-color: black;
+   
+} 
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
 }
