@@ -1,3 +1,10 @@
+/* Background color and font styles for the body element */
+
+body {
+  background-color: purple;
+}
+
+/* Product Page CSS File */
 .body {
   background-color: purple;
   font-size: 40px;
