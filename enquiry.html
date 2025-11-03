@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enquiry</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Enquiry form and frequently asked questions for Be My Muse!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vinny Gore">
+    <meta>
     <link rel="stylesheet" href="css_assets/styles.css">
+    <!--accordian script (note: file is in the jss_assetes folder in the project)-->
+    <script defer src="jss_assetes/accordian.js"></script>
+    <!--home.js script-->
+    <link rel="home.js" href="js_assets/home.js">
 </head>
 <body>
+
     <!--Navigation Bar-->
+
     <nav>
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
@@ -18,11 +27,36 @@
     
     <!--Heading-->
 
+    <p class="backlink"><a href="home.html" aria-label="Back to home"> Back to Home</a></p>
+
     <h1>Enquiry</h1>
 
     <!--Paragraph-->
 
     <p>If you have any questions, comments, or feedback, please feel free to reach out to us using the form below. We value your input and look forward to hearing from you!</p>
+
+    <!-- Accordion: Enquiry / FAQ -->
+
+    <section class="accordion" aria-label="Enquiry frequently asked questions">
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="enq-panel-1" id="enq-acc-1">How do I book a class?</button>
+            <div id="enq-panel-1" class="accordion-panel" role="region" aria-labelledby="enq-acc-1">
+                <p>To book a class, please contact us via the form below or call our phone number. We'll provide available times and registration details.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="enq-panel-2" id="enq-acc-2">What payment methods do you accept?</button>
+            <div id="enq-panel-2" class="accordion-panel" role="region" aria-labelledby="enq-acc-2">
+                <p>We accept card payments, EFT, and cash for in-person purchases. For classes we accept online payment via EFT or card.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="enq-panel-3" id="enq-acc-3">Can I request a custom artwork?</button>
+            <div id="enq-panel-3" class="accordion-panel" role="region" aria-labelledby="enq-acc-3">
+                <p>Yes — we accept custom portrait commissions. Please include details in the enquiry form and we will get back to you with a quote.</p>
+            </div>
+        </div>
+    </section>
     <form action="submit_enquiry.php" method="post">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" required><br><br>
@@ -38,7 +72,9 @@
 
         <input type="submit" value="Submit">
     </form>
+
     <!--Footer-->
+
     <footer>
         <p>&copy; 2025 Be My Muse. All rights reserved.</p>
     </footer>   

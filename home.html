@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>App</title>
     <meta charset="UTF-8">
+    <meta name="description" content="art in different forms and styles">
+    <meta name="keywords" content="art, books, poetry, painting, drawing, singing, dancing, rapping">
+    <meta name="author" content="Vinny Gore">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta>
     <title>Document</title>
     <link rel="stylesheet" href="css_assets/styles.css">
+    <!-- accordion script -->
+    <script defer src="jss_assetes/accordian.js"></script>
 </head>
 <body> 
     
     <!--Navigation Bar-->
+
     <nav>
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
@@ -18,17 +26,46 @@
     </nav>
 
     <!--Heading-->
+
     <h1>Welcome To "Be My Muse!"</h1>
 
     <!--Image-->
+
     <img src="_images/Be My Muse 3.png" alt="Be My Muse Logo" width="400" height="300">
 
     <!--Paragraph-->
+
     <p>Welcome to "Be My Muse!" the art studio where we sell the finest books and poetry books.<br>Not only does the store sell books it sells art pieces that are both painted and drawn too.</p>
     <p>The "Be My Muse!" values it's priorities by selling the best selling books that have been tailor made by the authors.<br>The books are found in different genres and as an addition we also have songbooks and poetry books too.</p>
     <p>The store also offers lessons in singing, dancing, art, writing and many more ways to encourage people to express themselves in various ways in the art industry.</p>
 
+    <!-- Accordion: Frequently offered classes -->
+
+    <section class="accordion" aria-label="Frequently offered classes">
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="panel-1" id="accordion-1">Art Classes</button>
+            <div id="panel-1" class="accordion-panel" role="region" aria-labelledby="accordion-1">
+                <p>We offer painting, drawing and mixed-media courses for beginners through advanced students.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="panel-2" id="accordion-2">Writing Workshops</button>
+            <div id="panel-2" class="accordion-panel" role="region" aria-labelledby="accordion-2">
+                <p>Weekly workshops focusing on poetry, short stories and creative non-fiction led by published authors.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="panel-3" id="accordion-3">Music & Dance</button>
+            <div id="panel-3" class="accordion-panel" role="region" aria-labelledby="accordion-3">
+                <p>Vocal coaching, instrumental lessons and dance classes for all ages and skill levels.</p>
+            </div>
+        </div>
+    </section>
+
     <!--Footer-->
+    
     <footer>
         <p>&copy; 2025 Be My Muse. All rights reserved.</p> 
     </footer>

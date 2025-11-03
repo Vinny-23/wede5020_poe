@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>App</title>
     <meta charset="UTF-8">
+    <meta name="description" content="Products offered by Be My Muse!"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta>
     <link rel="stylesheet" href="css_assets/styles.css">
+    <!--accordian script (note: file is in the jss_assetes folder in the project)-->
+    <script defer src="jss_assetes/accordian.js"></script>
+    <!-- home.js script -->
+    <link rel="home.js" href="js_assets/home.js">
     
 </head>
 <body>
@@ -18,50 +24,83 @@
     </nav>
     
     <!--Heading-->
+    
+    <p class="backlink"><a href="home.html" aria-label="Back to home"> Back to Home</a></p>
+
     <h1>Our Products</h1>
 
     <!--Paragraph-->
+
     <p>At "Be My Muse!" we cater to anyone who would love to showcase their art in various ways.<br>Our products are carefully picked to inspire and empower individuals to express themselves through various art forms.</p>
     <p> We sell different art supplies, books of different genres, books of poetry, paintings and drawings too.<br>As a bonus we also aid in the art of dancing, singing and rapping too.If there are are special requests we also paint portraits for anyone who books us.</p>
     <p>Our products are made with the safe products that are helpful and usefful to the users and also that do not harm the environment.<br>We take it upon ourselves in only selling the best of the best.</p>
     <p>When it comes to aiding in perfomance art we, provide the easiest of courses in learining in order for the individual to apply themselves.<br>We provide classes for a few months at a reasonable fee and later to apply themselves in life and to express themselves.</p>
 
-    <!--Table-->
-    
-    <table border="1" cellpadding="10" cellspacing="10" style="width:100%">
-        <!--Table Heading-->
-        <caption><strong>Product List and Prices</strong></caption>
-        <!--Table Rows-->
-        <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td>Art Supplies</td>
-            <td>R20 - R200</td>
-            <td>High-quality paints, brushes, and canvases (all skill levels.), pencils, colour pencils.</td>
-        </tr>
-        <tr>
-            <td>Books</td>
-            <td>R200 - R600</td>
-            <td>A wide range of genres including drama, fantasy, sci-fi, adventure, horror, romance, comedy,action, school textbooks and poetry.</td>
-        </tr>
-        <tr>
-            <td>Paintings & Drawings</td>
-            <td>R1200 - R5000</td>
-            <td>Original artworks by local artists, available in various styles.</td>
-        </tr>
-        <tr>
-            <td>Performance Art Classes</td>
-            <td>R1500 - R2000</td>
-            <td>Courses in singing, dancing, writing and rapping for all ages.</td>
-        </tr>
+    <!-- Accordion: Product categories -->
 
-    </table>
+    <section class="accordion" aria-label="Product categories">
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="product-panel-1" id="product-acc-1">Art Supplies</button>
+            <div id="product-panel-1" class="accordion-panel" role="region" aria-labelledby="product-acc-1">
+                <p>High-quality paints, brushes, canvases, pencils and coloured pencils for every skill level.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="product-panel-2" id="product-acc-2">Books</button>
+            <div id="product-panel-2" class="accordion-panel" role="region" aria-labelledby="product-acc-2">
+                <p>A wide range of genres including drama, fantasy, sci-fi, adventure, horror, romance and poetry.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="product-panel-3" id="product-acc-3">Paintings & Drawings</button>
+            <div id="product-panel-3" class="accordion-panel" role="region" aria-labelledby="product-acc-3">
+                <p>Original artworks by local artists, available in various styles and sizes.</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="product-panel-4" id="product-acc-4">Performance Art Classes</button>
+            <div id="product-panel-4" class="accordion-panel" role="region" aria-labelledby="product-acc-4">
+                <p>Courses in singing, dancing, writing and rapping for all ages, with tiered pricing and schedules.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product controls: search, filter, sort -->
+    <section id="product-controls" style="margin:1rem 0; display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center;">
+        <label for="product-search" style="display:flex;align-items:center;gap:0.5rem;"><strong>Search</strong>
+            <input id="product-search" type="search" placeholder="Search products or descriptions" style="padding:0.4rem; min-width:220px;">
+        </label>
+
+        <label for="product-category"><strong>Category</strong>
+            <select id="product-category" style="padding:0.4rem;">
+                <option value="all">All</option>
+            </select>
+        </label>
+
+        <label for="product-sort"><strong>Sort</strong>
+            <select id="product-sort" style="padding:0.4rem;">
+                <option value="name-asc">Name ↑</option>
+                <option value="name-desc">Name ↓</option>
+                <option value="price-asc">Price ↑</option>
+                <option value="price-desc">Price ↓</option>
+            </select>
+        </label>
+    </section>
+
+    <!-- Product list (rendered by JS) -->
+    <section id="product-list" aria-live="polite" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+        <!-- JS will populate product cards here -->
+    </section>
+
+    <!-- Attach product JS -->
+    <script defer src="jss_assetes/product.js"></script>
     
 
         <!--Footer-->
+
         <footer>
             <p>&copy; 2025 Be My Muse. All rights reserved. </p>
         </footer>

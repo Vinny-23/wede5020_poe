@@ -1,36 +1,406 @@
-/* General body style */
-
-body {
-  background-color: purple;
+/* Reset and base styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/*header style*/
-.h1{
-    font-size: 30px;
-    font-family: 'centurty gothic', sans-serif;
+/* General body style */
+body {
+    background-color: purple;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    overflow-x: hidden;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Century Gothic', 'Arial', sans-serif;
     font-weight: bold;
     margin-bottom: 1rem;
     color: black;
-    text-align: center; 
+    text-align: center;
+    line-height: 1.2;
 }
 
-/*paragraph style*/
-p{
-    font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-    color: black;
-    text-align: justify;
-    text-justify: inter-word;
+h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    margin-top: 2rem;
 }
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: black;
+    max-width: 70ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Navigation */
 nav {
     background-color: black;
-   
-} 
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
 nav a {
     color: white;
     text-decoration: none;
-    padding: 14px 20px;
+    padding: 0.75rem 1rem;
     display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
+
+nav a:hover,
+nav a:focus {
+    background-color: rgba(255,255,255,0.1);
+    outline: none;
+}
+
+nav a[aria-current="page"] {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+}
+
+/* Hero section */
+.hero-section {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+/* Main content areas */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+article {
+    background: rgba(255,255,255,0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive layout utilities */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Grid layout for card-based content */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        text-align: center;
+        margin: 0.2rem 0;
+    }
+
+    .hero-section {
+        margin: 1rem auto;
+    }
+
+    article {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+}
+
+/* Focus states for accessibility */
+a:focus,
+button:focus {
+    outline: 3px solid #4A90E2;
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: none;
+        color: black;
+    }
+
+    nav {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    article {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Backlink style (small subtle link to return to homepage) */
+.backlink {
+    max-width: 1200px;
+    margin: 0.5rem auto 0.75rem auto;
+    text-align: left;
+    padding-left: 1rem;
+}
+.backlink a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+}
+.backlink a:hover,
+.backlink a:focus {
+    text-decoration: underline;
+}
+
+/* Accordion styles */
+.accordion {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    background: #fff;
+    border-radius: 6px;
+    padding: 0.5rem;
+    color: #111;
+}
+.accordion-item + .accordion-item {
+    margin-top: 0.5rem;
+}
+.accordion-header {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    background: #222;
+    color: #fff;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 250ms ease, color 200ms ease;
+}
+.accordion-header:hover {
+    background: #333;
+}
+.accordion-header:focus {
+    outline: 3px solid #ffa500;
+}
+
+/* chevron using pseudo-element */
+.accordion-header::after {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translateY(-50%) rotate(45deg);
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transition: transform 300ms ease, opacity 200ms ease;
+    opacity: 0.95;
+}
+.accordion-item.active .accordion-header::after {
+    transform: translateY(-50%) rotate(225deg);
+}
+
+/* panel transitions: JS controls max-height; CSS handles smoothness, padding and opacity */
+.accordion-panel {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05) inset;
+    max-height: 0; /* start closed */
+    overflow: hidden;
+    padding: 0 16px; /* collapsed vertical padding */
+    opacity: 0;
+    transition: max-height 350ms ease, padding 300ms ease, opacity 300ms ease;
+}
+.accordion-item.active .accordion-panel {
+    /* when JS sets max-height to scrollHeight, this will animate */
+    padding: 12px 16px;
+    opacity: 1;
+}
+.accordion-panel p {
+    margin: 0;
+}
+/* Footer styles */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    margin: 0;
+}   
+/* Link styles in footer */
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}   
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .accordion {
+        padding: 0.25rem;
+    }
+    .accordion-header {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+    .accordion-panel {
+        padding: 10px 12px;
+    }
+}
+
+/* Additional styles for better appearance */
+h2 {
+    color: black;
+    font-family: 'centurty gothic', sans-serif;
+    margin-top: 1rem;
+}   
+ul {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}   
+a {
+    color: black;
+    text-decoration: underline;
+}
+a:hover {
+    color: rgb(154, 2, 171);
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+button:hover {
+    background-color: darkgray;
+}
+button:focus {
+    outline: 3px solid #ffa500;
+}
+/* General link styles */
+a {
+    color: black;
+    text-decoration: none;
+}   
+a:hover {
+    text-decoration: underline;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}   
+/* Button styles */
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+}   
+button:hover {
+    background-color: darkgray;
+}   
+
+button:focus {
+    outline: 3px solid #ffa500;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.slide-down {
+    animation: slideDown 0.5s ease-out;
+}
+/* End of styles.css */
+
+

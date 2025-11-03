@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>App</title>
     <meta charset="UTF-8">
+    <meta name="description" content="Contact information and location of Be My Muse!">
+    <meta name="keywords" content="contact, location, email, phone, directions, Be My Muse">
+    <meta name="author" content="Vinny Gore">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta>
      <link rel="stylesheet" href="css_assets/styles.css">
+     <!--accordian script (note: file is in the jss_assetes folder in the project)-->
+    <script defer src="jss_assetes/accordian.js"></script>
+    <link rel="home.js" href="js_assets/home.js">
 </head>
 <body>
 
     <!--Navigation Bar-->
+
     <nav>
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
@@ -18,32 +26,67 @@
     </nav>
     
     <!--Heading-->
+
+    <p class="backlink"><a href="home.html" aria-label="Back to home"> Back to Home</a></p>
+
     <h1>Address</h1>
 
     <!--Paragraph-->
+
     <p>We are found next to Pavillion Shopping Center as bellow</p>
     <p>Jack Martens Dr, Dawncliffe, Westville, 3611, South Africa</p>
 
     <!--Paragraph-->
+
     <p>The directions to reach our store are provided below in a form of a picture for directions</p>
 
     <!--Image-->
+
+    <h2>Location Map</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13842.034203746733!2d30.93146745627039!3d-29.849604261814953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snl!4v1756329208654!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+    <!-- Accordion: Contact methods -->
+
+    <section class="accordion" aria-label="Contact methods">
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="contact-panel-1" id="contact-acc-1">Email</button>
+            <div id="contact-panel-1" class="accordion-panel" role="region" aria-labelledby="contact-acc-1">
+                <p>Reach us at: info@bemymuse.com</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="contact-panel-2" id="contact-acc-2">Phone</button>
+            <div id="contact-panel-2" class="accordion-panel" role="region" aria-labelledby="contact-acc-2">
+                <p>Call us at: +27 98 067 1234 (available 9:00–17:00 weekdays)</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="contact-panel-3" id="contact-acc-3">Directions & Parking</button>
+            <div id="contact-panel-3" class="accordion-panel" role="region" aria-labelledby="contact-acc-3">
+                <p>We are next to Pavillion Shopping Center — limited street parking is available; a public parking lot is a short walk away.</p>
+            </div>
+        </div>
+    </section>
+
     <!--Heading-->
+
     <h2>For extra assitance</h2>
 
     <!--Image-->
+
     <img src="_images/Directions.png" alt="Directions Image">
 
 
     <!--Paragraph-->
+
     <p>For any inquiries or questions, please feel free to reach out to us through the following contact details:</p>
     <p>Email: www.bemymuse.com</p>
     <p>Phone: +27 98 067 1234</p>
     <p>Address: Jack Martens Dr, Dawncliffe, Westville, 3611, South Africa</p>
     <p>We look forward to hearing from you and assisting you with any information you may need!</p>
+
     <!--Footer-->
+
     <footer>
         <p>&copy; 2025 Be My Muse. All rights reserved.</p> 
     </footer>
