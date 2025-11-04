@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Heading-->
+
+    <h2>Enquiry Form</h2>
+
+    <!--Form-->
+    <form action="submit_enquiry.php" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <!--Availability and Costs-->
+    <h2>Availability and Costs</h2>
+
+    <!--Paragraph-->
+    <p>Our enquiry services are available Monday to Friday from 9:00 AM to 5:00 PM. We strive to respond to all enquiries within 48 hours during business days.</p>
+    <p>Choose your subscription ! </p>
+
+    <!--Radio Buttons-->
+    <form>
+        <input type="radio" id="basic" name="subscription" value="basic">
+        <label for="basic">Basic Enquiry Service - $10</label><br>
+
+        <input type="radio" id="premium" name="subscription" value="premium">
+        <label for="premium">Premium Enquiry Service - $20/month</label><br>
+
+        <input type="radio" id="vip" name="subscription" value="vip">
+        <label for="vip">VIP Enquiry Service - $30/month</label><br>
+
+        <input type="submit" value="Subscribe">
+    </form>
+
+    
+</body>
+</html>
