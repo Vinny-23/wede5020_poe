@@ -55,4 +55,6 @@ enquiryForm.addEventListener('submit', (e) => {
     }
 });
 
+/* AJAX Submission (Optional) */
+
 /* End of JS */
