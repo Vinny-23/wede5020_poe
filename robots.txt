@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Point search engines to the sitemap
+Sitemap: https://bemymuse.com/sitemap.xml
+
+# If you host the site at a subpath, update the Sitemap URL to the correct location.
