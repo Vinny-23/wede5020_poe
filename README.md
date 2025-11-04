@@ -25,6 +25,14 @@ v-At the html files, all of the coding, the links have been implemented to make 
 vi-The buttons of the have had a change of appearance and also are functioning as purposed.
 vii-In the html section, of the products sections, the table has been changed to be more elaborate and to occupy more space with products
 
+Part 3 Readme
+-The part 3 of the poe is about how the user will be able to open the website. The has been some added features to this part of the poe
+1. The has been the implementation of javascript. The javascript is linked to the html files and the CSS files as the three will be co-ordinationg together.
+2. There also has been been implemetation of accordions to all hhtml, CSS and Javascript files, the files have their own accordion files to support.
+3. In the html file, the use of backlinks and meta typing was implemented to show the user about the website and store
+4. In the html, there has also been 2 more files added for the customer incase if they would like to volunteer to donate or sponsor the establishment.This was implemented at html, CSS and javscript files.
+5. Sitemaps and robot files have been implemented for user safety and user friendliness.
+
 
 
 
