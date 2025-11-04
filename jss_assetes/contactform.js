@@ -26,4 +26,27 @@ contactForm.addEventListener('submit', (e) => {
     contactForm.reset();
 });
 
+/* Client-side Validation */
+contactForm.addEventListener('input', () => {
+    const name = contactForm.querySelector('#name').value.trim();
+    const email = contactForm.querySelector('#email').value.trim();
+    const message = contactForm.querySelector('#message').value.trim();
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    if (name && email && message) {
+        submitButton.disabled = false;
+    } else {
+        submitButton.disabled = true;
+    }
+});
+
+/* Error Handling */
+contactForm.addEventListener('submit', (e) => {
+    const email = contactForm.querySelector('#email').value.trim();
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+        e.preventDefault();
+        alert('Please enter a valid email address.');
+    }
+});
+
 /* End of JS */

@@ -32,4 +32,27 @@ enquiryForm.addEventListener('submit', (e) => {
     enquiryForm.reset();
 });
 
+/* Client-side Validation */
+enquiryForm.addEventListener('input', () => {
+    const fullName = enquiryForm.querySelector('#full-name').value.trim();
+    const email = enquiryForm.querySelector('#email').value.trim();
+    const message = enquiryForm.querySelector('#message').value.trim();
+    const submitButton = enquiryForm.querySelector('button[type="submit"]');
+    if (fullName && email && message) {
+        submitButton.disabled = false;
+    } else {
+        submitButton.disabled = true;
+    }   
+});
+
+/* Error Handling */
+enquiryForm.addEventListener('submit', (e) => {
+    const email = enquiryForm.querySelector('#email').value.trim();
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+        e.preventDefault();
+        alert('Please enter a valid email address.');
+    }
+});
+
 /* End of JS */
