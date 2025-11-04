@@ -30,3 +30,7 @@ enquiryForm.addEventListener('submit', (e) => {
 });
 
 /* End of JS */
+
+//References:
+// (w3shools, n.d) Validating Email Addresses in JavaScript
+// Available at: https://www.w3schools.com/js/js_validation.asp (Accessed: 31 October 2025).

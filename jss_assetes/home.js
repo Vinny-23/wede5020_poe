@@ -51,3 +51,7 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }   
 /* End of home.js */
+
+//References:
+// (w3shools, n.d) Validating Email Addresses in JavaScript
+// Available at: https://www.w3schools.com/js/js_validation.asp (Accessed: 31 October 2025).
