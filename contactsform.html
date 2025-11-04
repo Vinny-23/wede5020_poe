@@ -11,6 +11,24 @@
 
     <!--Paragraph-->
     <p>To be able to play your part in this establishment, please add you contact details and allow us to reach you.</p>
+    <p>Once the processes have been completed we will reach out to you and let you know.</p>
+
+    <!--Form-->
+    <form action="submit_contact.php" method="post">
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" id="fullName" name="fullName" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
     
 </body>
 </html>
